@@ -1,3 +1,5 @@
+import { RouterModule } from '@angular/router';
+
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -11,7 +13,8 @@ import { AboutComponent } from './about.component';
   ],
   imports: [
     CommonModule,
-    AboutRoutingModule
+    AboutRoutingModule,
+    RouterModule
   ]
 })
 export class AboutModule { }
