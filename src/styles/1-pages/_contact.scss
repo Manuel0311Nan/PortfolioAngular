@@ -1,0 +1,31 @@
+.container{
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: rgb(158,158,158);
+  background: linear-gradient(180deg, rgba(158,158,158,1) 0%, hsla(142, 98%, 55%, 0.582) 50%);
+  height: 70vh;
+  @media screen  and (max-width: 900px) {
+    flex-direction: column;
+        }
+  .contact{
+    background: rgba(252, 249, 249, 0.226);
+    align-items: center;
+    &__title{
+      font-family: 'Fredoka One', cursive;
+      margin-right: 10em ;
+    }
+    &__label{
+      font-family: 'Fredoka One', cursive;
+    }
+    &__input{
+      border-bottom: 1px black solid;
+    }
+  }
+  .contact:hover{
+border: 1px black;
+
+  }
+}
