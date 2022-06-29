@@ -189,15 +189,16 @@ display: none;
   &__button {
     cursor: pointer;
     display: none;
+    animation: .3s ease-in-out;
     @media screen  and (max-width: 600px) {
       display: flex;
-      justify-content: center;
       width: 125px;
+      transition: .3s ease-in-out;
     }
   }
   &__button:hover{
-    transform: rotateY(40deg);
-    transition: 0.8s;
+    width: 150px;
+
   }
   &__svg{
     width: 2em;

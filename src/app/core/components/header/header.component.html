@@ -3,13 +3,11 @@
   <a routerLink='/about' class="header__a">
     <img class="header__img" src="../../../../assets/images/button.png" alt=".." />
   </a>
-  <button     (click)= "setActive()" class="header__button">
-<img src="../../../../assets/images/button.png" alt="">
+  <button (click)= "setActive()" class="header__button">
+<img   src="../../../../assets/images/button.png" alt="">
   </button>
-  <!-- <h1 class="header__h1" data-text="MANUEL ALCÁZAR">Manuel Alcázar</h1> -->
   <nav class="header__nav " [ngClass]="{'header__nav--activo' : active}">
     <ul class="header__ul">
-      <!-- <li class="header__li"> <a class="header__li--a">Home</a></li> -->
       <li class="header__li"> <a class="header__li--a" routerLink='/about' [ngClass]="{'header__li--active': selectedRoute === 'about'}">About</a> </li>
       <li class="header__li"> <a class="header__li--a" routerLink='/work' [ngClass]="{'header__li--active': selectedRoute === 'work'}">Work</a> </li>
       <li class="header__li"> <a class="header__li--a" routerLink='/contact' [ngClass]="{'header__li--active': selectedRoute === 'contact'}">Contact</a></li>
