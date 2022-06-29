@@ -228,6 +228,7 @@ display: flex;
 flex-flow: row nowrap;
 justify-content: flex-end;
 align-items: center;
+
 @media screen and (max-width: 600px) {
 flex-direction: column;
   width: 100%;
@@ -241,10 +242,11 @@ flex-direction: column;
     font-size: 700;
     justify-content: center;
     margin: 7px 30px;
+    transition: .3s ease-in-out;
   }
   &__li:hover{
     text-decoration: underline;
-    box-shadow: #74C69D 0px 0px 0px 3px, #40916C 0px 0px 0px 6px;
+    box-shadow: #74C69D 0px 0px 0px 3px;
     font-weight: 700;
 }
 }
