@@ -1,6 +1,5 @@
 import { Component} from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
-import { UserRegister } from 'src/app/models/user-register';
 
 @Component({
   selector: 'app-contact',
@@ -14,19 +13,23 @@ export class ContactComponent{
     private formBuilder: FormBuilder,) {
     this.userRegisterForm = this.formBuilder.group({
       name:  new FormControl( '', [Validators.required,]),
-      email:new FormControl( '', [Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")]),
+      email: new FormControl('', [Validators.required]),
+      phone:new FormControl( '', [Validators.required]),
+
     })
   }
-  public onSubmit(): void {
-    this.submitted = true;
+onSubmit(){
+    // this.submitted = true;
     if (this.userRegisterForm.valid) {
-      const user: UserRegister = {
-        name: this.userRegisterForm.get('name')?.value,
-        email: this.userRegisterForm.get('email')?.value,
-      };
-      console.log(user);
+      console.log("Form Submitted")
+      // const user: UserRegister = {
+      //   name: this.userRegisterForm.get('name')?.value,
+      //   email: this.userRegisterForm.get('email')?.value,
+      //   phone: this.userRegisterForm.get('phone')?.value,
+      // };
+      // console.log(user);
       this.userRegisterForm.reset();
-      this.submitted = false;
+      // this.submitted = false;
     }
   }
 

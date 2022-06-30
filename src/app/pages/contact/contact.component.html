@@ -1,5 +1,5 @@
 <section class="form">
-<h2 class="form__h2">Formulario de Registro:</h2>
+<h2 class="form__h2">Contacta conmigo</h2>
 <form class="form__form" novalidate (ngSubmit)="onSubmit()" [formGroup]="userRegisterForm">
 	<fieldset class="form__fieldset">
     <label class="form__label" for="name">Nombre:</label>
@@ -8,13 +8,15 @@
   <fieldset class="form__fieldset">
     <label class="form__label" for="email">Email:</label>
     <input class="form__input" type="text" id="email" formControlName="email"  />
-
+  </fieldset>
+  <fieldset class="form__fieldset">
+    <label class="form__label" for="phone">Phonenumber:</label>
+    <input class="form__input" type="text" id="phone" formControlName="phone"  />
   </fieldset>
   <fieldset class="form__fieldset">
     <label class="form__label" for="message">Message:</label>
-    <textarea class="form__textarea" name="" id=""></textarea>
-
+    <textarea class="form__textarea" name="message" id="message" ></textarea>
   </fieldset>
-	<button class="form__button" type="submit" [disabled]="!userRegisterForm.valid">Registrate</button>
+	<button type="submit" class="form__button" >Contáctame</button>
 </form>
 </section>

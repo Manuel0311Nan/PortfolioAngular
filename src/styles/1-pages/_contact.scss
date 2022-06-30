@@ -20,11 +20,17 @@ justify-content: center;
                 }
         }
         &__fieldset{
-          padding: 2em;
+          padding: 1em;
           width: 250px;
           display: flex;
           flex-direction: column;
           align-items: center;
+          transition: 0.2s ease-in-out;
+        }
+        &__fieldset:hover{
+          background-color: rgba(8, 8, 8, 0.562);
+          border-radius: 1em;
+          color: white;
         }
         &__h2{
           font-family: 'Fredoka One', cursive;
@@ -34,20 +40,26 @@ justify-content: center;
         }
         &__label{
           font-family: 'Fredoka One', cursive;
+          text-transform: uppercase;
         }
         &__input{
-          border: 1px solid black;
+          border: 3px solid black;
           border-radius: .5rem;
           margin-top: 1em;
           height: 2em;
-
+          transition: 0.2s ease-in-out;
+          &__input:focus{
+            border: none;
+          }
         }
         &__textarea{
-          border: 1px solid black;
+          border: 3px solid black;
           border-radius: .5rem;
           margin-top: 1em;
           height: 4em;
-
+          &__textarea:hover{
+            border: 3px solid rgb(245, 242, 242);
+          }
         }
         &__button{
           padding: 1rem;
@@ -57,5 +69,10 @@ justify-content: center;
           border: 3px solid black;
           cursor: pointer;
           border-radius: .5rem;
+        }
+        &__button:hover{
+          background-color: rgb(252, 248, 248);
+          color: rgb(12, 12, 12);
+          border: 3px solid rgb(245, 242, 242);
         }
 }
