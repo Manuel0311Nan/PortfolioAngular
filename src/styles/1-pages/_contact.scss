@@ -1,31 +1,61 @@
-.container{
+.form{
   display: flex;
-
-  justify-content: center;
+flex-direction: column;
+justify-content: center;
   align-items: center;
   width: 100%;
   background: rgb(158,158,158);
   background: linear-gradient(180deg, rgba(158,158,158,1) 0%, hsla(142, 98%, 55%, 0.582) 50%);
-  height: 70vh;
-  @media screen  and (max-width: 900px) {
-    flex-direction: column;
+  height: 90vh;
+  @media screen  and (max-width: 1000px) {
+    padding-top: 3em;
+    height: 90vh;
         }
-  .contact{
-    background: rgba(252, 249, 249, 0.226);
-    align-items: center;
-    &__title{
-      font-family: 'Fredoka One', cursive;
-      margin-right: 10em ;
-    }
-    &__label{
-      font-family: 'Fredoka One', cursive;
-    }
-    &__input{
-      border-bottom: 1px black solid;
-    }
-  }
-  .contact:hover{
-border: 1px black;
+        &__form{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          @media screen  and (max-width: 1000px) {
+            flex-direction: column;
+                }
+        }
+        &__fieldset{
+          padding: 2em;
+          width: 250px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        &__h2{
+          font-family: 'Fredoka One', cursive;
+          font-size: 20px;
+          justify-content: center;
+          text-transform: uppercase;
+        }
+        &__label{
+          font-family: 'Fredoka One', cursive;
+        }
+        &__input{
+          border: 1px solid black;
+          border-radius: .5rem;
+          margin-top: 1em;
+          height: 2em;
 
-  }
+        }
+        &__textarea{
+          border: 1px solid black;
+          border-radius: .5rem;
+          margin-top: 1em;
+          height: 4em;
+
+        }
+        &__button{
+          padding: 1rem;
+          background-color: black;
+          color: white;
+          font-family: 'Fredoka One', cursive;
+          border: 3px solid black;
+          cursor: pointer;
+          border-radius: .5rem;
+        }
 }
